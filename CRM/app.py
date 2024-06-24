@@ -26,10 +26,6 @@ def predict():
         print(prediction)
         dt = dict(df[df['cluster_12'] == prediction]['label'].value_counts())
         ls = list(dt.keys())
-        # ls = []
-        # for k,v in dt.items():
-        #     if v>=70:
-        #         ls.append(k)
         return jsonify(ls)
 
 

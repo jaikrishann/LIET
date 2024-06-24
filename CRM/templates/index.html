@@ -72,63 +72,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script>
-        document.getElementById('formm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            fetch('/predict', {
-                method: 'POST',
-                body: new FormData(e.target)
-            })
-            .then(response => response.json())
-            .then(data => {
-                displayCropImages(data);
-            })
-            .catch(error => console.error('Error:', error));
-        });
-
-        function displayCropImages(cropLabels) {
-            const cropResultsDiv = document.getElementById('cropResults');
-            cropResultsDiv.innerHTML = ''; // Clear previous results
-
-            if (cropLabels.length === 0) {
-                return; // If no labels, simply return without adding new cards
-            }
-
-            cropLabels.forEach(label => {
-                const card = document.createElement('div');
-                card.classList.add('card');
-
-                const img = document.createElement('img');
-                // img.classList.add('card-img-top');
-                // img.src = `/static/images/${label}.jpg`; // Default to .jpg format
-                img.alt = label; // Set alt text for accessibility
-
-                // Check if .png version exists, if yes, use it
-                const imgPng = `/static/images/${label}.png`;
-                fetch(imgPng)
-                    .then((response) => {
-                        if (response.status !== 404) {
-                            img.src = imgPng;
-                        }
-                    })
-                    .catch((error) => {
-                        console.error('Error fetching .png image:', error);
-                    });
-
-                const cardBody = document.createElement('div');
-                cardBody.classList.add('card-body');
-
-                const title = document.createElement('h5');
-                title.classList.add('card-title');
-                title.textContent = label;
-
-                cardBody.appendChild(title);
-                card.appendChild(img);
-                card.appendChild(cardBody);
-
-                cropResultsDiv.appendChild(card);
-            });
-        }
-    </script> -->
+    
 </body>
 </html>
